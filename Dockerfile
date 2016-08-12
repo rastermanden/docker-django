@@ -21,11 +21,7 @@ WORKDIR /code
 ENV PYTHONUNBUFFERED 1
 ENV DJANGO_VERSION 1.9.7
 
-ENV DJANGO_DB_HOST localhost
-ENV DJANGO_DB_PORT 5432
-ENV DJANGO_SUPERUSER_NAME djangoadmin
-ENV DJANGO_SUPERUSER_MAIL djangoadmin@djangoadmin.com
-ENV DJANGO_SUPERUSER_PASS mysecretdjangoadminpassword
+ENV DJANGO_DB_HOST=localhost DJANGO_DB_PORT=5432 DJANGO_SUPERUSER_NAME=djangoadmin DJANGO_SUPERUSER_MAIL=djangoadmin@djangoadmin.com DJANGO_SUPERUSER_PASS=mysecretdjangoadminpassword
 
 RUN pip install Django==$DJANGO_VERSION
 
